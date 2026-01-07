@@ -11,7 +11,7 @@ export function FloatButton({ onClick, label = "Agregar" }: IFloatButton) {
       onClick={onClick}
       aria-label={label}
       className="
-        fixed bottom-6 right-6 // Fijo en la esquina inferior derecha
+        fixed bottom-36 right-8 // Fijo en la esquina inferior derecha
         p-4                    // Padding generoso
         bg-fab-blue             // Usa el color primario de tu tema
         text-background // Color del icono (blanco o claro)

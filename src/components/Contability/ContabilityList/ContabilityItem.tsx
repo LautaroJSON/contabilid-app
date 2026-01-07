@@ -1,5 +1,5 @@
 import { ClassNamesProps } from "@/utils/utilsClsx"; // O tu lógica de clases
-import type { IContabilityItem } from "@/types"; // Asegúrate de que la ruta sea correcta
+import type IContabilityItem from "@/types"; // Asegúrate de que la ruta sea correcta
 
 export function ContabilityItem({ item }: { item: IContabilityItem }) {
   const isIngreso = item.type === "ingreso";

@@ -15,6 +15,28 @@
   --color-surface: #f8fafc; /* Slate 50: Para fondos de cards o inputs */
   --color-border-subtle: #e2e8f0; /* Slate 200: Para bordes finos de 1px */
   --color-fab-blue: #2563eb; /* Azul para el botón flotante */
+  --animate-slide-up: slide-up 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  --animate-slide-down: slide-down 1s forwards;
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-down {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @layer base {
