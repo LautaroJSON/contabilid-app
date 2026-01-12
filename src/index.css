@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+@theme {
+  /* --- Colores de Marca --- */
+  --color-brand-primary: #0f172a; /* Slate 900: Para textos principales y logos */
+  --color-brand-accent: #6366f1; /* Indigo 500: Para botones y elementos de acción */
+
+  /* --- Colores de Semántica (Contabilidad) --- */
+  --color-income: #10b981; /* Emerald 500: Para ingresos y saldos positivos */
+  --color-expense: #f43f5e; /* Rose 500: Para gastos y saldos negativos */
+
+  /* --- Superficies y Fondos --- */
+  --color-background: #ffffff; /* Blanco puro */
+  --color-foreground: #0f172a; /* Texto principal */
+  --color-surface: #f8fafc; /* Slate 50: Para fondos de cards o inputs */
+  --color-border-subtle: #e2e8f0; /* Slate 200: Para bordes finos de 1px */
+  --color-fab-blue: #2563eb; /* Azul para el botón flotante */
+  --animate-slide-up: slide-up 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  --animate-slide-down: slide-down 1s forwards;
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-down {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@layer base {
+  body {
+    /* Aplicamos la transición para que el cambio de modo oscuro sea suave */
+    @apply bg-background text-foreground transition-colors duration-300 antialiased;
+    font-family: "Inter", system-ui, sans-serif;
+  }
+}
