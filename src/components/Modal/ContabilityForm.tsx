@@ -13,7 +13,7 @@ export function ContabilityForm({ onClose }: ContabilityFormProps) {
     title: "",
     details: "",
     count: 0,
-    type: "egreso",
+    type: "ingreso",
     divisa: "EUR",
     date: new Date().toISOString().split("T")[0], // Fecha de hoy por defecto
   });
