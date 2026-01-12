@@ -1,7 +1,7 @@
 import { useContability } from "@/context/ContabilityProvider";
-import { ContabilityItem, TransactionItem } from "./ContabilityItem";
+import { ContabilityItem } from "./ContabilityItem";
 import { ReceiptText } from "lucide-react";
-import { useRef, useState } from "react";
+import { useState } from "react";
 
 function EmptyState() {
   return (
