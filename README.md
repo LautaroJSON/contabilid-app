@@ -5,6 +5,7 @@ Aplicación frontend minimalista creada con React, TypeScript y Vite para gestio
 ## Descripción
 
 Proyecto de ejemplo/plantilla que contiene componentes para mostrar balances, listas de contabilidad y un formulario modal.
+Desarrollado con react + ts y Tailwind. 
 
 ## Requisitos
 
@@ -38,10 +39,4 @@ Comandos útiles:
 2. Ejecuta `npm run dev`.
 3. Abre http://localhost:5173 en tu navegador.
 
-## Notas
 
-- README generado automáticamente y simplificado. Reemplaza o amplía secciones según necesites.
-
----
-
-Si quieres, puedo crear un archivo de ejemplo `.env`, agregar instrucciones de lint/format o hacer el commit de estos cambios.
