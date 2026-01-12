@@ -1,6 +1,7 @@
 import { useContability } from "@/context/ContabilityProvider";
-import { ContabilityItem } from "./ContabilityItem";
+import { ContabilityItem, TransactionItem } from "./ContabilityItem";
 import { ReceiptText } from "lucide-react";
+import { useRef, useState } from "react";
 
 function EmptyState() {
   return (
@@ -42,6 +43,8 @@ function EmptyState() {
 
 export function ContabilityList() {
   const { transactions } = useContability();
+  const [idViewOptions, setidViewOptions] = useState<string | null>(null);
+
   return (
     <section className="flex flex-col w-full max-w-[800px]">
       <div className="flex justify-between items-center mb-4 px-2">
@@ -56,7 +59,14 @@ export function ContabilityList() {
       <div className="bg-surface border border-border-subtle rounded-[24px] p-4 shadow-sm">
         {transactions.length !== 0 ? (
           transactions.map((item) => (
-            <ContabilityItem key={item.id} item={item} />
+            <ContabilityItem
+              onClick={() =>
+                setidViewOptions((prev) => (prev === item.id ? null : item.id))
+              }
+              key={item.id}
+              item={item}
+              viewOptions={idViewOptions === item.id}
+            />
           ))
         ) : (
           <EmptyState></EmptyState>
